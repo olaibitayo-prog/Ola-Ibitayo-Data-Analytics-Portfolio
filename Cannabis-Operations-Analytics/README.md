@@ -1,4 +1,4 @@
-Cannabis Operations Analytics Dashboard
+### Cannabis Operations Analytics Dashboard
 ## Project Overview
 
 This project analyzes cannabis cultivation, production, quality control, and sales data to identify operational improvement opportunities and support data-driven decision-making.
@@ -82,28 +82,28 @@ SELECT
 FROM weedop
 GROUP BY strain
 ORDER BY total_revenue DESC;
-2. Which strains produce the highest yield?
+### 2. Which strains produce the highest yield?
 SELECT
     strain,
     AVG(yield_grams) AS avg_yield_grams
 FROM weedop
 GROUP BY strain
 ORDER BY avg_yield_grams DESC;
-3. Which strains have the highest quality control defects?
+### 3. Which strains have the highest quality control defects?
 SELECT
     strain,
     SUM(qc_defect_flag) AS total_qc_defects
 FROM weedop
 GROUP BY strain
 ORDER BY total_qc_defects DESC;
-4. Which cultivation rooms perform best by yield?
+### 4. Which cultivation rooms perform best by yield?
 SELECT
     cultivation_room,
     AVG(yield_grams) AS avg_yield_grams
 FROM weedop
 GROUP BY cultivation_room
 ORDER BY avg_yield_grams DESC;
-5. What products should production prioritize?
+### 5. What products should production prioritize?
 SELECT
     strain,
     SUM(revenue) AS total_revenue,
