@@ -1,31 +1,29 @@
-# Cannabis Operations Analytics Dashboard
-
+Cannabis Operations Analytics Dashboard
 ## Project Overview
 
-This project analyzes cannabis production and operational data to evaluate business performance, identify inefficiencies, and support data-driven decision making.
+This project analyzes cannabis cultivation, production, quality control, and sales data to identify operational improvement opportunities and support data-driven decision-making.
 
-The analysis focuses on production output, quality control, inventory management, and revenue performance.
+Using Excel, SQL, and Power BI, the analysis evaluates strain performance, cultivation room performance, quality outcomes, revenue generation, and product prioritization.
 
 ---
 
 ## Business Problem
 
-Cannabis producers manage large amounts of operational data across cultivation, production, inventory, and sales.
+Cannabis producers manage operational data across cultivation rooms, production activities, inventory, quality control, and sales.
 
 Without effective analytics, leadership may struggle to identify:
 
-- Production inefficiencies
-- Quality issues
+- High-performing products
+- Quality control issues
+- Cultivation room performance gaps
 - Revenue opportunities
-- Inventory challenges
+- Products that should be prioritized for production
 
-This project demonstrates how analytics can improve operational visibility.
+This project demonstrates how analytics can improve operational visibility and support better business decisions.
 
 ---
 
 ## Business Questions
-
-This analysis answers:
 
 1. Which cannabis strains generate the highest revenue?
 2. Which strains produce the highest yield?
@@ -39,19 +37,21 @@ This analysis answers:
 
 The dataset includes:
 
-- Batch information
 - Cannabis strains
-- Production rooms
-- Yield metrics
-- Quality control results
-- Inventory data
-- Sales performance
+- Cultivation rooms
+- Yield grams
+- Quality control defect flags
+- Inventory units
+- Units sold
+- Revenue
+- Sale price
+- Environmental metrics including temperature, humidity, and CO2 levels
 
 ---
 
 ## Data Cleaning Process
 
-Data quality issues identified:
+Data quality issues reviewed:
 
 - Missing values
 - Duplicate records
@@ -59,34 +59,57 @@ Data quality issues identified:
 - Inconsistent categories
 - Invalid operational values
 
-Cleaning steps:
+Cleaning steps completed:
 
-- Standardized fields
-- Validated production metrics
-- Removed duplicates
-- Prepared analysis tables
+- Standardized field names
+- Validated numeric fields
+- Reviewed duplicate records
+- Prepared fields for SQL analysis
+- Built clean measures for Power BI reporting
 
 ---
 
 ## SQL Analysis
 
-SQL techniques used:
+SQL was used to validate the dataset and answer key business questions before dashboard development.
 
-- SELECT statements
-- Filtering
-- GROUP BY
-- Aggregations
-- Joins
-- KPI calculations
-
-Example business analysis:
-
-Which strains generate the highest revenue?
+### 1. Which cannabis strains generate the highest revenue?
 
 ```sql
 SELECT
     strain,
     SUM(revenue) AS total_revenue
-FROM production
+FROM weedop
 GROUP BY strain
 ORDER BY total_revenue DESC;
+2. Which strains produce the highest yield?
+SELECT
+    strain,
+    AVG(yield_grams) AS avg_yield_grams
+FROM weedop
+GROUP BY strain
+ORDER BY avg_yield_grams DESC;
+3. Which strains have the highest quality control defects?
+SELECT
+    strain,
+    SUM(qc_defect_flag) AS total_qc_defects
+FROM weedop
+GROUP BY strain
+ORDER BY total_qc_defects DESC;
+4. Which cultivation rooms perform best by yield?
+SELECT
+    cultivation_room,
+    AVG(yield_grams) AS avg_yield_grams
+FROM weedop
+GROUP BY cultivation_room
+ORDER BY avg_yield_grams DESC;
+5. What products should production prioritize?
+SELECT
+    strain,
+    SUM(revenue) AS total_revenue,
+    SUM(units_sold) AS total_units_sold,
+    AVG(yield_grams) AS avg_yield_grams,
+    SUM(qc_defect_flag) AS total_qc_defects
+FROM weedop
+GROUP BY strain
+ORDER BY total_revenue DESC, total_units_sold DESC, avg_yield_grams DESC;
