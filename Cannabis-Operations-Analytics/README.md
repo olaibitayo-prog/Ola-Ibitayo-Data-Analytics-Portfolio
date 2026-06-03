@@ -56,7 +56,7 @@ Based on revenue generation, **Room 3** was the strongest financial performer.
 | Revenue | $137.44M |
 | Defect Volume | 2.53K |
 | Yield | 22.49M g |
-| Average Price per Unit | $24.59 |
+| Average Price per Unit | $27.59 |
 
 - Room 3 generated the highest revenue among all cultivation rooms.
 - Room 3 also recorded the highest defect volume.
