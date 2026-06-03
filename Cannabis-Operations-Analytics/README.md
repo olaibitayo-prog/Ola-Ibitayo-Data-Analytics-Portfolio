@@ -1,149 +1,121 @@
 # Cannabis Operations Analytics Dashboard
 
-## Project Overview
+## Executive Summary
 
-This project analyzes cannabis cultivation operations to identify the factors driving production performance, quality outcomes, and revenue generation.
-
-Using Power BI, the dashboard evaluates cultivation rooms, strains, yield performance, defect rates, and financial outcomes to support operational decision-making.
-
-The analysis focuses on answering key business questions:
-
-- Which cultivation rooms deliver the strongest operational performance?
-- Which rooms generate the highest revenue?
-- How do defect rates impact yield and financial outcomes?
-- Which strains contribute most to production efficiency?
-- What operational practices should be replicated across facilities?
+This analysis evaluates cannabis cultivation performance across strains and cultivation rooms to identify the primary drivers of revenue, yield, and operational efficiency.
 
 ---
 
-## Business Problem
+## Highest Revenue by Strain
 
-Management needed visibility into cultivation performance across multiple grow rooms.
+The five cannabis strains generated approximately **$684 million** in total revenue.
 
-While production volume was being tracked, there was limited understanding of:
-
-- Yield efficiency
-- Defect impact
-- Revenue generation
-- Operational consistency
-
-The objective was to identify high-performing rooms and uncover opportunities to improve production quality and profitability.
+- **Strain E** generated the highest revenue at **$137.5 million**, representing **20.09%** of total revenue.
+- **Strain D** generated the lowest revenue at approximately **$136 million**, which is **1.11% lower** than Strain E.
+- Revenue performance by strain is directly related to units sold.
+- **Strain E** recorded the highest sales volume at approximately **5 million units sold**.
+- **Strain D** recorded the lowest sales volume at approximately **4.96 million units sold**.
 
 ---
 
-## Dashboard KPIs
+## Yield Performance by Strain
 
-### Operational Performance
+Based on the analysis, **Strain E** produced the highest yield, with a total yield of approximately **22.65 million grams**.
 
-- Total Yield (g)
-- Average Yield per Room
-- Defect Rate (%)
-- Total Units Sold
-- Yield by Strain
-- Yield by Cultivation Room
+- The lowest-performing strain produced approximately **22.41 million grams**.
+- Yield variation between strains was relatively small.
+- Factors that directly influence strain yield include:
+  - Temperature
+  - Humidity
+  - CO₂ levels
+  - Nutrient management
+
+---
+
+## Profitability vs. Quality Control Defects
+
+Profitability is primarily influenced by **units sold** and **average selling price per strain**, making **Strain E** the most profitable strain despite also recording the highest defect volume.
+
+- An indirect relationship exists between profitability and defect rates.
+- Yield and units sold by cultivation room appear to be related to quality control defect rates, with an average variance of approximately ±200 defects.
+- Although units sold show a relationship with defect volume at the room level, profitability is more strongly influenced by:
+  - Units sold
+  - Average selling price per unit
+  - Market demand
+
+---
+
+## Best Performing Cultivation Room
 
 ### Financial Performance
 
-- Total Revenue
-- Revenue by Room
-- Revenue by Strain
-- Revenue per Gram
-- Revenue per Unit Sold
+Based on revenue generation, **Room 3** was the strongest financial performer.
 
----
+| Metric | Room 3 |
+|---|---|
+| Revenue | $137.44M |
+| Defect Volume | 2.53K |
+| Yield | 22.49M g |
+| Average Price per Unit | $24.59 |
 
-## Key Findings
+- Room 3 generated the highest revenue among all cultivation rooms.
+- Room 3 also recorded the highest defect volume.
+- The average selling price per unit in Room 3 was approximately **$0.40 higher** than Room 5, contributing to its revenue performance.
 
-### 1. Room 4 Delivered the Best Overall Performance
+### Operational Performance
 
-Room 4 emerged as the strongest cultivation room across both operational and financial metrics.
+From an operational perspective, **Room 4** was the strongest performer.
 
-**Performance Highlights**
+| Metric | Room 4 |
+|---|---|
+| Yield | 22.53M g |
+| Defect Volume | 2.48K |
 
-- Highest Yield: 22.53M grams
-- Lowest Defect Rate
-- Strong Revenue Contribution
-- Consistently high production output
-
-This suggests that operational practices used in Room 4 should be investigated and replicated across other cultivation rooms.
-
----
-
-### 2. Defects Impact Revenue More Than Yield Alone
-
-Analysis showed that production volume alone does not guarantee financial success.
-
-When data was analyzed by cultivation room, a relationship emerged between:
-
-- Defect Rate
-- Yield
-- Units Sold
-- Revenue
-
-Rooms with lower defects consistently generated stronger financial outcomes even when yield differences were relatively small.
-
-This indicates that quality control is a significant driver of revenue performance.
-
----
-
-### 3. Yield and Revenue Do Not Always Move Together
-
-Several cultivation rooms generated high yields but did not achieve proportional revenue performance.
-
-This suggests that:
-
-- Product quality
-- Market demand
-- Units sold
-- Defect levels
-
-play an important role in determining revenue outcomes.
-
-Management should evaluate performance using both operational and financial indicators rather than yield alone.
-
----
-
-### 4. Revenue Performance Requires a Balanced Approach
-
-The analysis revealed that top-performing cultivation rooms shared three characteristics:
-
-- High Yield
-- Low Defects
-- Strong Sales Performance
-
-Focusing on only one of these metrics can create misleading conclusions.
-
-A balanced performance framework provides a more accurate picture of operational success.
+- Room 4 recorded the lowest defect volume across all cultivation rooms.
+- Room 4 achieved one of the highest yield outputs while maintaining the strongest quality performance.
+- Room 4 recorded approximately **500 fewer defects** than Room 3.
 
 ---
 
 ## Recommendations
 
-### Short-Term
+Based on the findings of this analysis:
 
-- Investigate operational practices used in Room 4
-- Review quality control procedures in lower-performing rooms
-- Monitor defect trends weekly
+- Continue prioritizing **Strain E**, as it remains the primary revenue driver within the product portfolio.
+- Evaluate the feasibility of cultivating more Strain E production within environments that replicate the operating conditions of **Room 4**, which recorded the lowest defect volume.
+- Investigate the environmental conditions contributing to Room 4's performance, including:
+  - Nutrient programs
+  - Humidity levels
+  - CO₂ management
+  - Cultivation room controls
+- Continue leveraging regional sales opportunities, as region appears to be a significant factor influencing overall business performance.
+- Focus future growth initiatives on increasing sales volume, as revenue performance across strains and cultivation rooms appears to be heavily influenced by units sold.
 
-### Medium-Term
+The highest revenue observed during the analysis was approximately **$137.73 million**, indicating that opportunities for additional growth remain available through targeted sales and operational strategies.
 
-- Standardize best practices across cultivation rooms
-- Introduce room-level performance scorecards
-- Track revenue impact of defect reduction initiatives
+---
 
-### Long-Term
+## Conclusion
 
-- Develop predictive models to identify future defect risks
-- Implement automated operational reporting
-- Establish a cultivation performance benchmarking framework
+The analysis identified **Strain E** as the leading strain in terms of revenue, units sold, yield, and overall commercial performance.
+
+While **Room 3** generated the highest revenue, **Room 4** demonstrated the strongest operational performance through its combination of high yield and the lowest defect volume.
+
+These findings suggest that future business decisions should focus on maximizing the commercial success of Strain E while adopting the operational practices that contributed to Room 4's performance.
+
+---
+
+## Dashboard Preview
+
+![Dashboard Overview](dashboard-overview.png)
 
 ---
 
 ## Tools Used
 
 - Power BI
-- Microsoft Excel
 - SQL
+- Microsoft Excel
 - DAX
 
 ---
@@ -151,15 +123,8 @@ A balanced performance framework provides a more accurate picture of operational
 ## Skills Demonstrated
 
 - Business Analysis
-- Data Cleaning
 - Data Visualization
 - KPI Development
-- Operational Analytics
-- Root Cause Analysis
 - Executive Reporting
-- Dashboard Design
 - Data Storytelling
-
-- ## About This Project
-
-This project was developed as part of my Data Analytics Portfolio to demonstrate business analysis, SQL, Power BI, and executive reporting capabilities using a cannabis operations dataset.
+- Operational Analytics
